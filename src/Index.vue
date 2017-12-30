@@ -137,5 +137,16 @@ export default {
 
     font-size: inherit;
   }
+  .el-pagination .btn-prev .el-icon,
+  .el-pager,
+  .el-pagination span:not([class*=suffix]) {
+    font-size:inherit !important;
+  }
+  .el-pager li {
+    font-size: inherit !important;
+  }
+  .el-pagination button {
+    font-size: inherit !important;
+  }
 
 </style>

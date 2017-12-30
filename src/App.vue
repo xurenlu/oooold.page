@@ -66,12 +66,7 @@ export default {
   body {
     background-color:#eee;
   }
-  .el-pager li {
-    font-size: inherit !important;
-  }
-  .el-pagination button {
-    font-size: inherit !important;
-  }
+
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
