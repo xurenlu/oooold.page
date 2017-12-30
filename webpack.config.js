@@ -90,8 +90,9 @@ module.exports = {
     ignored: /node_modules/
   }
 }
-
-if (process.env.NODE_ENV === 'production') {
+let env = process.env.NODE_ENV;
+env = "production";
+if (env === 'production') {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([

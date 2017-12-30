@@ -1,12 +1,14 @@
 <template>
 
-  <div id="app">
+  <div id="app" v-bind:style="{fontSize: fontSize}">
     <router-view></router-view>
   </div>
 </template>
 
 <script>
 //import axios from "../axios";
+import BlogFoot from "./BlogFoot.vue";
+import BlogHead from "./BlogHead.vue";
 const axios = require("axios");
 export default {
   name: 'app',
@@ -16,23 +18,54 @@ export default {
       msg: 'Welcome to Your Vue.js App',
       items: [
       { title: 'Foo' ,postId:1},
-      { title: 'Bar' ,postId:2}
-    ]
+      { title: 'Bar' ,postId:2},
+
+      ],
+       fontSize:"1rem"
     }
   },
+  components:{
+    BlogHead:BlogHead,BlogFoot:BlogFoot
+  },
+
   mounted(){
-    let self = this;
-    axios.get('/data/index.json').then( function(response){
-    self.items = (response.data);
-    });
+    var browser={
+    versions:function(){
+           var u = navigator.userAgent, app = navigator.appVersion;
+           return {//移动终端浏览器版本信息
+                trident: u.indexOf('Trident') > -1, //IE内核
+                presto: u.indexOf('Presto') > -1, //opera内核
+                webKit: u.indexOf('AppleWebKit') > -1, //苹果、谷歌内核
+                gecko: u.indexOf('Gecko') > -1 && u.indexOf('KHTML') == -1, //火狐内核
+                mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否为移动终端
+                ios: !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/), //ios终端
+                android: u.indexOf('Android') > -1 || u.indexOf('Linux') > -1, //android终端或者uc浏览器
+                iPhone: u.indexOf('iPhone') > -1 , //是否为iPhone或者QQHD浏览器
+                iPad: u.indexOf('iPad') > -1, //是否iPad
+                webApp: u.indexOf('Safari') == -1, //是否web应该程序，没有头部与底部
+                weixin: u.indexOf('MicroMessenger') > -1, //是否微信
+                qq: u.match(/\sQQ/i) == " qq" //是否QQ
+            };
+         }(),
+         language:(navigator.browserLanguage || navigator.language).toLowerCase()
+}
+
+  if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||
+  	browser.versions.iPhone || browser.versions.iPad){
+   		this.fontSize = "2rem";
+    }
   }
 }
+
 
 
 
 </script>
 
 <style lang="scss">
+  body {
+    background-color:#eee;
+  }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -40,6 +73,7 @@ export default {
 
     color: #2c3e50;
     margin-top: 60px;
+    background-color:white;
   }
 
   h1, h2 {
@@ -61,7 +95,7 @@ export default {
   }
 
   a {
-    color: #42b983;
+
   }
 
   .help-md p {
@@ -69,16 +103,20 @@ export default {
     text-indent: 2em;
   }
 
+  #app {
+
+  }
   html, body {
     font-family: "SF UI Display", ".PingFang SC", "PingFang SC", "Neue Haas Grotesk Text Pro", "Arial Nova", "Segoe UI", "Microsoft YaHei", "Microsoft JhengHei", "Helvetica Neue", "Source Han Sans SC", "Noto Sans CJK SC", "Source Han Sans CN", "Noto Sans SC", "Source Han Sans TC", "Noto Sans CJK TC", "Hiragino Sans GB", sans-serif;
-    font-size: 16px;
+    font-size: 18px;
+
     color: #222;
     -webkit-text-size-adjust: none;
     min-width: 200px;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
-    line-height: 1.5rem;
+
+    line-height: 0rem;
 
   }
 

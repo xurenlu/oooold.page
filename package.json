@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.17.1",
+    "element-ui": "^2.0.10",
     "remark": "^8.0.0",
     "remark-highlight.js": "^5.0.0",
     "remark-html": "^7.0.0",

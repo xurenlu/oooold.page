@@ -1,49 +1,76 @@
 <template>
   <div id="content">
-    <a href="/">
-    <header>一米六二的Blog</header>
-      </a>
-
-    <div class="  help-md">
+    <BlogHead/>
+    <article class="help-md" id="post">
       <div class="panel-heading">
         <div class="nothing">
           <a href="/">&lt;&lt;返回首页</a>
         </div>
-        <h3>
+        <title>
           {{item.title}}
-        </h3>
+        </title>
       </div>
 
       <div class="">
         <span v-html="html"></span>
-
+      </div>
+      <div class="dashang-wrapper">
+        <div> 如果您觉得对您有帮助，欢迎打赏。</div>
+        <img src="/dist/code.jpg" class="dashang"/>
       </div>
 
       <div class="disqus">
         <div id="disqus_thread"></div>
-
-
       </div>
-    </div>
+    </article>
 
 
-    {{msg}}
+    <BlogFoot/>
   </div>
 </template>
 <style>
+.dashang-wrapper {
+margin-top:50px;
+  text-align:center;
+}
+.dashang {
+  min-width:250px;
+  max-width:400px;
+  min-height:250px;
+  max-height:400px;
+}
+#content {
+  background:white;
+}
   .help-md {
-    width:80%;
+    width:95%;
+
     min-Height:200px;
   }
-   header {
-    font-size:64px;
-    height:100px;
-    padding:0;
-  }
+
+  #post {
+      color: #2c353d;
+    font-size: 1rem;
+    line-height: 1.5;
+width:95%;
+    }
+    @media screen and (min-width: 801px) {
+      #post {
+        padding-left:180px;
+        padding-right:80px;
+        width:85%;
+      }
+    }
+
+
+
+
+
 </style>
 <script>
   const axios = require("axios");
-
+import BlogFoot from "./BlogFoot.vue";
+import BlogHead from "./BlogHead.vue";
   var remark = require('remark');
 var html  = require('remark-html');
 var hljs  = require('remark-highlight.js');
@@ -61,9 +88,9 @@ var hljs  = require('remark-highlight.js');
                 html:""
             }
         },
-        components:{
-
-        },
+    components:{
+    BlogHead:BlogHead,BlogFoot:BlogFoot
+  },
         mounted(){
           let self = this;
 
@@ -84,6 +111,11 @@ var hljs  = require('remark-highlight.js');
 
         }
     }
+
+
+
+
+
 
 
 </script>
