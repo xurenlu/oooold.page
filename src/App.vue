@@ -81,6 +81,9 @@ export default {
   h1, h2 {
     font-weight: normal;
   }
+  h1,h2,h3,h4,h5,h6 {
+    font-size:inherit !important;
+  }
 
   ul {
     list-style-type: none;
