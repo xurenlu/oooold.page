@@ -4,9 +4,9 @@
 
     <ol class="main-list">
       <li v-for="item in items">
-        <h5>
+
         <a v-bind:href="'/'+ item.postId +''">{{ item.title }} </a>
-        </h5>
+
       </li>
     </ol>
     <div class="page">
@@ -134,8 +134,7 @@ export default {
     padding:0;
   }
   h5 {
-    font-size: 1rem;
-    line-height:16px;
+    line-height:1rem;
   }
 
 </style>

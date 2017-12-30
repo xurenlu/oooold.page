@@ -50,7 +50,6 @@ margin-top:50px;
 
   #post {
       color: #2c353d;
-    font-size: 1rem;
     line-height: 1.5;
 width:95%;
     }
