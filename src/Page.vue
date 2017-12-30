@@ -55,9 +55,9 @@ width:95%;
     }
     @media screen and (min-width: 801px) {
       #post {
-        padding-left:180px;
+        padding-left:80px;
         padding-right:80px;
-        width:85%;
+        width:97%;
       }
     }
 
