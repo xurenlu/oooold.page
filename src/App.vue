@@ -52,8 +52,9 @@ export default {
 
   if(browser.versions.mobile || browser.versions.ios || browser.versions.android ||
   	browser.versions.iPhone || browser.versions.iPad){
-   		this.fontSize = "2rem";
+   		this.fontSize = "2.5rem";
     }
+
   }
 }
 

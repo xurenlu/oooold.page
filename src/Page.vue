@@ -57,7 +57,7 @@ width:95%;
       #post {
         padding-left:80px;
         padding-right:80px;
-        width:97%;
+        width:95%;
       }
     }
 
