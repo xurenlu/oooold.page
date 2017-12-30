@@ -16,7 +16,7 @@
       </div>
       <div class="dashang-wrapper">
         <div> 如果您觉得对您有帮助，欢迎打赏。</div>
-        <img src="/dist/code.jpg" class="dashang"/>
+        <img src="https://yl162cm.oss-cn-beijing.aliyuncs.com/dist/code.jpg" class="dashang"/>
       </div>
 
       <div class="disqus">
