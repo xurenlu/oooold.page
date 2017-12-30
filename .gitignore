@@ -10,4 +10,5 @@ yarn-error.log
 *.njsproj
 *.sln
 *.yml
+*.map
 build.js.map
