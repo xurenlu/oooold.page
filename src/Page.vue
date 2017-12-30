@@ -1,7 +1,8 @@
 <template>
   <div id="content">
-
+    <a href="/">
     <header>一米六二的Blog</header>
+      </a>
 
     <div class="  help-md">
       <div class="panel-heading">
@@ -42,19 +43,19 @@
 </style>
 <script>
   const axios = require("axios");
-  const showdown  = require('showdown');
+
   var remark = require('remark');
 var html  = require('remark-html');
 var hljs  = require('remark-highlight.js');
 
 
-    const converter = new showdown.Converter();
+
     //text      = '#hello, markdown!',
     //html      = converter.makeHtml(text);
     export default{
         data(){
             return{
-                msg:'hello vue',
+                msg:' ',
                 item:{
                 },
                 html:""

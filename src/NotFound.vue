@@ -13,7 +13,7 @@
     export default{
         data(){
             return{
-                msg:'hello vue'
+                msg:''
             }
         },
         components:{

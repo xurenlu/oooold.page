@@ -1,12 +1,14 @@
 <template>
   <div id="app">
-    <header>一米六二的Blog</header>
+    <a href="/">
+    <header>
+      一米六二的Blog</header></a>
 
 
     <ol>
       <li v-for="item in items">
         <h5>
-        <a v-bind:href="'/'+ item.postId +'#disqus_thread'">{{ item.title }} </a>
+        <a v-bind:href="'/'+ item.postId +''">{{ item.title }} </a>
         </h5>
       </li>
     </ol>
@@ -21,7 +23,6 @@
 <script>
 //import axios from "../axios";
 const axios = require("axios");
-const _ = require("lodash");
 export default {
   name: 'app',
   data () {
@@ -38,7 +39,11 @@ export default {
     let self = this;
     axios.get('/data/index.json').then( function(response){
     let items = response.data;
-    self.items = _(items).reverse().value();
+    let target = [];
+    for(let item of items){
+      target.unshift(item);
+    }
+    self.items =  target;
     //self.items = items;
     });
   }
