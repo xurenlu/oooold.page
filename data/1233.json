@@ -1,1 +1,1 @@
-{"title":"tokyo tyrant list命令补丁更新","zzzContent":"我博客右上角的链接“我参与的开源项目”中，有一个tokyo tyrant的补丁，功能是让tokyo tyrant这个memcache的服务端支持list命令。这个patch文件是错的，我附加了一个文件，把正确的do_mc_list函数写在了里面，谢谢。","postDate":"2010-10-26 23:34:24","postId":"1233","type":"post","status":"draft"}
+{"title":"tokyo tyrant list命令补丁更新","zzzContent":"我博客右上角的链接“我参与的开源项目”中，有一个tokyo tyrant的补丁，功能是让tokyo tyrant这个memcache的服务端支持list命令。这个patch文件是错的，我附加了一个文件，把正确的do_mc_list函数写在了里面，谢谢。","postDate":"2010-10-26 23:34:24","postId":"1233","type":"post","status":"draft","imported":true,"file":"1233.md"}
