@@ -4,16 +4,15 @@ const fs = require('graceful-fs');
 const path = require('path');
 const readLineSync = require("readline-sync");
 const clicolor = require("cli-color");
-const tizi = require("./lib/tizi");
+const CWD = process.cwd();
+// const tizi = require("./lib/tizi")("/Users/r/Documents/ShuyiApp/Site/data",
+//   "/Users/r/Documents/ShuyiApp/Docs/"
+// );
 
-//const files = tizi.map("./md/",".md");
-// console.log(files);
-// for(let file of files){
-//   console.log(file)
-// }
-
-
-
+const tizi = require("./lib/tizi")(process.cwd()+"/data/",
+  process.cwd()+"/md/"
+);
+console.log(tizi);
 
 
 program.version("0.0.1").description('static blog system base on vuejs;' + "\n" +

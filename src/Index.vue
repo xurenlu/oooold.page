@@ -61,7 +61,7 @@ export default {
   },
   mounted(){
     let self = this;
-    axios.get('/data/index.json').then( function(response){
+    axios.get('/data/index.json?id='+ Math.random()).then( function(response){
     let items = response.data;
     let target = [];
     for(let item of items){
@@ -86,67 +86,6 @@ export default {
 </script>
 
 <style lang="scss">
-  #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
-    color: #2c3e50;
-    margin-top: 60px;
-  }
-
-  h1, h2 {
-    font-weight: normal;
-  }
-
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-
-  ul li {
-    display: inline-block;
-    margin: 0 10px;
-  }
-
-  ol li {
-    list-style: none;
-  }
-
-  ol.main-list {
-    padding-left:100px;
-  }
-  div.page {
-    padding-left:100px;
-    margin-top:50px;
-  }
-  a {
-    color: #567b99;
-    font-weight: normal;
-  }
-  a:hover {
-    text-decoration: none;
-  }
-
-  header {
-    font-size:64px;
-    height:100px;
-    padding:0;
-  }
-  h5 {
-
-    font-size: inherit;
-  }
-  .el-pagination .btn-prev .el-icon,
-  .el-pager,
-  .el-pagination span:not([class*=suffix]) {
-    font-size:inherit !important;
-  }
-  .el-pager li {
-    font-size: inherit !important;
-  }
-  .el-pagination button {
-    font-size: inherit !important;
-  }
 
 </style>

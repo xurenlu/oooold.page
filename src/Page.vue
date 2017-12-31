@@ -29,37 +29,6 @@
   </div>
 </template>
 <style>
-.dashang-wrapper {
-margin-top:50px;
-  text-align:center;
-}
-.dashang {
-  min-width:250px;
-  max-width:400px;
-  min-height:250px;
-  max-height:400px;
-}
-#content {
-  background:white;
-}
-  .help-md {
-    width:95%;
-
-    min-Height:200px;
-  }
-
-  #post {
-      color: #2c353d;
-    line-height: 1.5;
-width:95%;
-    }
-    @media screen and (min-width: 801px) {
-      #post {
-        padding-left:80px;
-        padding-right:80px;
-        width:95%;
-      }
-    }
 
 
 
@@ -94,7 +63,7 @@ var hljs  = require('remark-highlight.js');
           let self = this;
 
         //console.log($route.params);
-          axios.get("/data/"+this.$route.params.postId+".json").then(function(response){
+          axios.get("/data/"+this.$route.params.postId+".json?t="+Math.random()).then(function(response){
             //console.log(response.data);
             self.item = response.data;
             //console.log(response.data);
@@ -110,11 +79,6 @@ var hljs  = require('remark-highlight.js');
 
         }
     }
-
-
-
-
-
 
 
 </script>

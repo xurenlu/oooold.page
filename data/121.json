@@ -1,1 +1,1 @@
-{"title":"用变量来代替数字","zzzContent":"<p>今天因为要做一个系列的温度下的应力状态的对比，所以考虑到导出命令<br />\n然后把350 改为wendu，然后 在 前面设置wendu=350,然后每次重新设置一个温度，运行命令流就可以得到新温度下的结果  果然很不错<br />\n我已经算了40多个记录了。\n</p>","postDate":"2005-05-24 15:22:59","postId":"121","type":"post","status":"publish","imported":true,"file":"121.md"}
+{"title":"用变量来代替数字","zzzContent":"<p>今天因为要做一个系列的温度下的应力状态的对比，所以考虑到导出命令<br />\n然后把350 改为wendu，然后 在 前面设置wendu=350,然后每次重新设置一个温度，运行命令流就可以得到新温度下的结果  果然很不错<br />\n我已经算了40多个记录了。\n</p>","postDate":"2005-05-24 15:22:59","postId":121,"type":"post","status":"publish","imported":true,"file":"121.md"}

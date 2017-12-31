@@ -1,18 +1,32 @@
 {
   "name": "tizi",
-  "description": "a static blog system by gun.h",
-  "version": "1.0.0",
-  "author": "黄滚 <55547082@qq.com>",
-  "license": "BSD",
-  "private": true,
+  "version": "0.0.1",
+  "description": "scan markdown files in some directory,generate json files ,so you can create static blog sytstem on github,by tiziblog.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/xurenlu/tizi.git"
+  },
+  "keywords": [
+    "markdown",
+    "weblog",
+    "blog",
+    "static",
+    "site",
+    "github"
+  ],
+  "author": "suntower <55547082@qq.com>",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/xurenlu/tizi/issues"
+  },
+  "homepage": "https://github.com/xurenlu/tizi#readme",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --open --hot",
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
-    "assert": "^1.4.1",
-    "axios": "^0.17.1",
-    "cli-color": "^1.2.0",
+
     "commander": "^2.12.2",
     "element-ui": "^2.0.10",
     "nodemon": "^1.14.6",
@@ -33,6 +47,9 @@
     "not ie <= 8"
   ],
   "devDependencies": {
+    "assert": "^1.4.1",
+    "axios": "^0.17.1",
+    "cli-color": "^1.2.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.0",
