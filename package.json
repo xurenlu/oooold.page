@@ -29,15 +29,15 @@
 
     "commander": "^2.12.2",
     "element-ui": "^2.0.10",
-    "nodemon": "^1.14.6",
-    "readline-sync": "^1.4.7",
+
+
     "remark": "^8.0.0",
     "remark-highlight.js": "^5.0.0",
     "remark-html": "^7.0.0",
     "showdown": "^1.8.6",
     "turndown": "^4.0.1",
     "uglifyjs-webpack-plugin": "^1.1.5",
-    "underscore": "^1.8.3",
+
     "vue": "^2.5.11",
     "vue-router": "^3.0.1"
   },

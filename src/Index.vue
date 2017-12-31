@@ -5,7 +5,7 @@
     <ol class="main-list">
       <li v-for="item in items">
         <h5>
-        <a v-bind:href="'/'+ item.postId +''">{{ item.title }} </a>
+          <a v-bind:href="'/'+ item.postId +''">{{ item.title }} </a>
         </h5>
       </li>
     </ol>
