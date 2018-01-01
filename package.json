@@ -33,6 +33,7 @@
     "babel-runtime": "^6.26.0",
     "commander": "^2.12.2",
     "element-ui": "^2.0.10",
+    "readline-sync": "^1.4.7",
     "remark": "^8.0.0",
     "remark-highlight.js": "^5.0.0",
     "remark-html": "^7.0.0",

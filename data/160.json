@@ -1,1 +1,0 @@
-{"title":"对网站进行了升级","zzzContent":"<p>最近因为面条出去了几天，没有来网站，没有想到动网居然出来这么大一个漏洞.<br />\n大家反映的无法察看帖子，原来是因为:<br />\ndispbbs.asp第391行的cint应该改为clng.<br />\n改过之后问题就解决了，面条又把系统升级到了7.01.</p>","postDate":"2005-04-18 10:37:07","postId":160,"type":"post","status":"publish","imported":true,"file":"160.md"}

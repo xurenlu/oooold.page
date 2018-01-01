@@ -1,1 +1,0 @@
-{"title":"只有可读可写，只可写两种状态的对象","zzzContent":"突然想到，在javascript中,window.top对象只有这两种状态:\n1.可读可写:\n就是当iframe的框架外页和内页处于同一域内时;\n2.只可写不可读：\n就是当iframe的框架外页和内页处于不同域内时;\n\n嗯，原来设计东西的时候总是认为一般情况有写权限时就一定有读权限....误区啊。","postDate":"2009-01-14 11:53:50","postId":814,"type":"post","status":"publish","imported":true,"file":"814.md"}
