@@ -1,13 +1,13 @@
 const path = require('path')
 const webpack = require('webpack')
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+//const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: './src/main.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'app4.js'
+    filename: 'bundle.js'
   },
   module: {
     rules: [
@@ -58,11 +58,25 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        use:[{
+          loader: 'babel-loader',
+          options:{
+            // presets:['es2015'],//生产环境需要用webpack.optimize.UglifyJsPlugin，写在这里不起作用，必须在.babelrc
+            plugins:[
+              'syntax-dynamic-import',
+              ["component", [
+                {
+                  "libraryName": "element-ui",
+                  "styleLibraryName": "theme-chalk"
+                }
+              ]]
+            ]
+          },
+        }],
         exclude: /node_modules/
       },
       {
-        test: /\.(png|jpg|gif|svg)$/,
+        test: /\.(png|jpg|gif|svg|TTF|ttf|woff)$/,
         loader: 'file-loader',
         options: {
           name: '[name].[ext]?[hash]'
@@ -89,7 +103,7 @@ module.exports = {
   watchOptions: {
     ignored: /node_modules/
   }
-}
+};
 let env = process.env.NODE_ENV;
 env = "production";
 if (env === 'production') {
