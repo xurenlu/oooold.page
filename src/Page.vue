@@ -16,9 +16,8 @@
       </div>
       <div class="dashang-wrapper">
         <div> 你可以微信扫码打赏。</div>
-        <img src="https://yl162cm.oss-cn-beijing.aliyuncs.com/dist/code.jpg" class="dashang"/>
+        <img src="http://162cm.12zan.cn/dist/code.jpg" class="dashang"/>
       </div>
-
       <div class="disqus">
         <div id="disqus_thread"></div>
       </div>
