@@ -67,12 +67,12 @@ var hljs  = require('remark-highlight.js');
             self.item = response.data;
             //console.log(response.data);
             let content = response.data.zzzContent;
-            console.log(content);
+
             //content += "\n1. Hey \n2. Cute.\n## hello world";
             //let html = converter.makeHtml(content);
             //console.log(html);
 
-          let c = remark().use([ html, hljs ]).processSync(content )
+            let c = remark().use([ html, hljs ]).processSync(content )
             self.html = c.contents;
           });
 
